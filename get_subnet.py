@@ -11,5 +11,7 @@ def get_local_ip():
         s.close()
     return ip
 
-local_ip = get_local_ip()
-print("Local IP:", local_ip)
+def get_subnet(ip):
+    parts = ip.split('.')
+    subnet = '.'.join(parts[:3]) + '.'
+    return subnet
